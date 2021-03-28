@@ -1,0 +1,225 @@
+@import "../helpers/_variables";
+@import "../helpers/_mixin";
+
+.order-form-fix{
+    margin-top: 205px !important;
+}
+#order-form{
+    margin-top: 25px;
+}
+.order-form-container{
+    .order-form{
+        overflow: hidden;
+        .order-form-header{
+            .header{
+                padding: 0px 25px;
+                margin-bottom: 25px;
+                span{
+                    text-transform: capitalize;
+                    font-size: 28px;
+                }
+            }
+            .order-form-sub-header{
+                width: 100%;
+                height: 80px;
+                background-color: $-s-m-color;
+                @include prefix(border-radius,10px,webkit moz o ms);
+                line-height: 80px;
+                padding: 0px 25px;
+                @media screen and (max-width:767px){
+                        height: fit-content;
+                        overflow: hidden;
+                }
+                span{
+                    text-transform: capitalize;
+                    font-weight: bold;
+                }
+                input{
+                    line-height: normal;
+                    height: 50px;
+                    width: 300px;
+                    padding: 0px 15px;
+                    @include prefix(border-radius,10px,webkit moz o ms);
+                    border: 0;
+                    @media screen and (max-width:767px){
+                        width: 100%;   
+                    }
+                }
+                button{
+                    line-height: normal;
+                    height: 50px;
+                    width: 80px;
+                    @include prefix(border-radius,10px,webkit moz o ms);
+                    @include prefix(border-top-left-radius,0px,webkit moz o ms);
+                    @include prefix(border-bottom-left-radius,0px,webkit moz o ms);
+                    position: absolute;
+                    right: 0px;
+                    top: 15px;
+                    background-color: $m-color;
+                    color: #fff;
+                    border: 0;
+                }
+                div{
+                    float: left;
+                    @media screen and (max-width:767px){
+                        text-align: center; 
+                        width: 100%;
+                    }
+                }
+                div+div{
+                    float: right;
+                    position: relative;
+                }
+            }
+            
+        }
+        .order-form-info-sec{
+            padding: 0;
+            margin-top: 25px;
+            float: left;
+            .order-info-header{
+                width: 100%;
+                padding: 15px 0px;
+                border-bottom: solid 1px $-s-m-color;
+                margin-bottom: 30px;
+                span{
+                    font-size: 18px;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                }
+            }
+            .form-info{
+                form{
+                    label{
+                        text-transform: capitalize;
+                        font-weight: 600;
+                    }
+                    input{
+                        width: 100%;
+                        padding: 8px;
+                        @include prefix(border-radius,5px,webkit moz o ms);
+                        border: solid 1px $m-color;
+                        margin-bottom: 15px;
+                        outline: 0;
+                    }
+                    select{
+                        width: 100%;
+                        padding: 8px;
+                        @include prefix(border-radius,5px,webkit moz o ms);
+                        border: solid 1px $m-color;
+                        margin-bottom: 15px;
+                        outline: 0;
+                    }
+                    textarea{
+                        width: 100%;
+                        height: 100px;
+                        resize: none;
+                        @include prefix(border-radius,5px,webkit moz o ms);
+                        border: solid 1px $m-color;
+                        outline: 0;
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+        .order-form-details-sec{
+            float: right;
+            padding:0px 50px;
+            margin-top: 50px;
+            @media screen and (max-width:992px){
+                padding: 0px 0px 0px 50px;
+            }
+            @media screen and (max-width:767px){
+                padding: 0;
+            }
+            .details-view{
+                border: solid 1px $-s-m-color;
+                @include prefix(border-radius,5px,webkit moz o ms);
+            }
+            .order-form-details-header{
+                background-color: $-s-m-color;
+                padding: 15px;
+                text-transform: capitalize;
+                font-weight: 600;
+                @include prefix(border-radius,5px,webkit moz o ms);
+                margin-bottom: 50px;
+            }
+            .order-details{
+                ul{
+                    list-style: none;
+                    li{
+                        border-bottom: solid 1px $-s-m-color;
+                        padding: 15px 10px;
+                        width: 90%;
+                        margin: auto;
+                        text-transform: capitalize;
+                        font-weight: 600;
+                        ul{
+                            li{
+                                padding: 0;
+                                border: 0;
+                                width: 50%;
+                                display:inline-block;
+                            }
+                            li+li{
+                                text-align: right;
+                            }
+                        }
+                        .details{
+                            overflow: hidden;
+                            height: 70px;
+                            ul{
+                                padding: 0;
+                                float: left;
+                                li{
+                                    border: 0;;
+                                    width: 100%;
+                                    text-transform: capitalize;
+                                    font-weight: 600;
+                                    font-size: 14px ;
+                                    display:flex;
+                                }
+                            }
+                            .photo{
+                                float: left;
+                                height: 100%;
+                                padding: 0;
+                                @include prefix(border-radius,10px,webkit moz o ms);
+                                overflow: hidden;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .order-notes{
+                    padding:0px 25px;
+                    text-transform: capitalize;
+                    span{
+                        font-weight: 600;
+                    }
+                    h5{
+                        margin-top: 25px;
+                    }
+                    p{
+                        font-size: 12px ;
+                    }
+                    button{
+                        width: 100%;
+                        margin-top: 25px;
+                        padding: 12px;
+                        text-transform: capitalize;
+                        font-weight: 600;
+                        border: 0;
+                        background-color: $m-color;
+                        color: #fff;
+                        @include prefix(border-radius,10px,webkit moz o ms);
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,239 @@
+@import "../helpers/_variables";
+@import "../helpers/_mixin";
+
+
+.fix-product{
+    margin-top: 205px !important;
+}
+.product-details{
+    padding: 0;
+    float: left;
+    height: fit-content;
+    div{
+        padding: 0;
+    }
+    .product-photo{
+        height: 300px;
+        padding-right: 25px;
+        float: left;
+        overflow: hidden;
+        @media screen and (max-width:767px){
+            padding: 0;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            @include prefix(border-radius,10px,webkit moz o mz);
+        }
+
+    }
+    .product-info{
+        float: left;
+    }
+}
+
+.product-container{
+    overflow: hidden;
+    margin-top: 25px;
+    position: relative;
+.product-colors{
+    float: left;
+    padding: 0;
+    @media screen and (min-width:767px) and (max-width:992px){
+        position: absolute;
+        width: 40%;
+        top: 325px;
+    }
+
+    .product-colors-head{
+        background-color: $-s-m-color;
+        padding: 15px;
+        text-transform: capitalize;
+        font-weight: 600;
+        @include prefix(border-radius,10px,webkit moz o mz);
+    }
+    .product-colors-sec{
+        ul{
+            list-style: none;
+            text-align: center;
+            margin: 25px auto 0px auto;
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+
+            li{
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+                padding: 5px;
+                @include prefix(border-radius,100%,webkit moz o mz);
+                border: solid 1px rgba(0, 0, 0,.2);
+                position: relative;
+                cursor: pointer;
+                span{
+                    width: 85%;
+                    height: 85%;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    list-style: none;
+                    @include prefix(transform,translate(-49%,-51%),webkit moz o mz);
+                    @include prefix(border-radius,100%,webkit moz o mz);
+                    background-color: var(--pro-color);
+                }
+                .check-icon{
+                    display: none;
+                }
+            }
+            .active{
+                border: double 1px #000;
+                .check-icon{
+                    display: block;
+                    font-size: 8px;
+                    position: absolute;
+                    z-index: 6666;
+                    left: 50%;
+                    top: 50%;
+                    @include prefix(transform,translate(-50%,-50%),webkit moz o mz);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.product-info{
+    .product-category{
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+    h3{
+        text-transform: capitalize;
+        color: $m-color;
+        margin-bottom: 30px;
+    }
+    ul{
+        list-style: none;
+        .item-price{
+            font-weight: bold;
+            color: $m-color;
+            display: inline-block;
+            span{
+                text-decoration: line-through;
+                color: gray;
+            }
+        }
+        .product-rating{
+            display: inline-block;
+            position: relative;
+            top: -4px;
+            margin-left: 10px;
+            &::before{
+                content: "";
+                width: 1px;
+                height: 15px;
+                background-color: gray;
+                position: absolute;
+                left: -5px;
+                top: 8px;
+            }
+        }
+        .product-details-p{
+            font-size: 14px;
+            margin-top: 25px;
+        }
+        .product-availabilty,.product-code,.product-size,.product-quantity{
+            text-transform: capitalize;
+            font-weight: bold;
+            height: 40px;
+            span{
+                color: $m-color;
+            }
+        }
+        .product-size{
+            #size-select{
+                text-transform: uppercase;
+                padding: 2px;
+                @include prefix(border-radius,10px,webkit moz o ms);
+                border: solid 2px #000;
+                margin-left: 10px;
+                outline: 0;
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+        .product-quantity{
+            input{
+                text-align: center;
+                width: 100px;
+                border: 0px;
+                padding: 5px;
+                outline: 0;
+                background-color: $-s-m-color;
+                @include prefix(border-radius,10px,webkit moz o ms);
+                padding-left: 18px;
+            }
+            button{
+                width: 25px;
+                border: 0;
+                background: #fab6b6;
+                padding: 5px;
+                @include prefix(border-radius,10px,webkit moz o ms);
+                @include prefix(transition,.3s,webkit moz o ms);
+                position: relative;
+                &:hover{
+                    @include prefix(transition,.3s,webkit moz o ms);
+                    background-color: #fd9a9a;
+                }
+            }
+            .minus{
+                left: 25px;
+            }
+            .plus{
+                right: 25px;
+            }
+        }
+        .add-to-cart{
+            margin-top: 50px;
+            button{
+                padding: 5px;
+                width: 140px;
+                height: 50px;
+                background-color: $-s-m-color;
+                border: 0;
+                text-transform: capitalize;
+                @include prefix(border-radius,20px,webkit moz o ms);
+                font-weight: bold;
+                font-size: 14px;
+                @include prefix(transition,.3s,webkit moz o ms);
+                &:hover{
+                    background-color: $m-hover;
+                    color: #fff;
+                    @include prefix(transition,.3s,webkit moz o ms);
+                }
+            }
+        }
+    }
+}
+}
+
+
+.related-products-container{
+    margin-top: 100px;
+    .header-title{
+        width: 200px;
+        background-color: $-s-m-color;
+        padding: 15px;
+        text-transform: capitalize;
+        @include prefix(border-radius,10px,webkit moz o mz);
+        font-weight: 600;
+        text-align: center;
+    }
+    .items{
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width:992px){
+            display: block;
+        }
+    }    
+}

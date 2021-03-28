@@ -1,0 +1,91 @@
+@import "../helpers/_variables";
+@import "../helpers/_mixin";
+
+.contact-fix{
+    margin-top: 280px !important ;
+    @media screen and (max-width:767px){
+        margin-top: 205px !important;
+    }
+}
+
+.contact-us-container{
+    margin-top: 100px;
+    @media screen and (max-width:767px){
+        margin-top: 25px;
+    }
+    .contact-us{
+        overflow: hidden;
+        .logo{
+            overflow: hidden;
+            float: left;
+            margin-top: 70px;
+            img{
+                width: 100%;
+            }
+        }
+        .contact-form{
+            float: left;
+            position: relative;
+            form{
+                position: relative;
+                span{
+                    font-size:32px ;
+                    text-transform: capitalize;
+                    margin-bottom: 25px;
+                    font-weight: 600;
+                    @media screen and (max-width:767px){
+                        background-color: $-s-m-color;
+                        position: absolute;
+                        width: 100%;
+                        height: 60px;
+                        text-align: center;
+                        line-height: 60px;
+                        @include prefix(border-radius,10px,webkit moz o ms);
+                    }
+                    @media screen and (max-width:470px){
+                        font-size: 26px ;
+                    }
+                }
+                input{
+                    margin-top: 25px;
+                    display: block;
+                    padding: 8px 15px;
+                    text-transform: capitalize;
+                    border: solid 1px $m-color;
+                    width: 300px;
+                    @include prefix(border-radius,10px,webkit moz o ms);
+                    outline: 0;
+                    @media screen and (max-width:767px){
+                        width: 100%;
+                    }
+                }
+                .input-name{
+                    @media screen and (max-width:767px){
+                        margin-top: 60px;
+                    }
+                }
+                textarea{
+                    width: 100%;
+                    margin-top: 25px;
+                    @include prefix(border-radius,10px,webkit moz o ms);
+                    border: solid 1px $m-color;
+                    outline: 0;
+                    padding: 15px;
+                    height: 200px;
+                    resize: none;
+                }
+                button{
+                    width: 150px;
+                    padding: 10px;
+                    background-color: $m-color;
+                    color: #fff;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    border: 0;
+                    @include prefix(border-radius,10px,webkit moz o ms);
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}

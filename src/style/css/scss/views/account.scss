@@ -1,0 +1,120 @@
+@import "../helpers/_variables";
+@import "../helpers/_mixin";
+
+.fix-account{
+    margin-top: 225px !important;
+}
+.user-account{
+    margin-bottom: 50px;
+}
+.user-account-header{
+    height: fit-content;
+    overflow: hidden;
+    margin-top: 50px;
+    padding:0px 25px;
+    height: 0px;
+    text-transform: capitalize;
+    @include prefix(border-radius,10px,webkit moz o ms);
+    h1{
+        font-size: 22px;
+        line-height: 80px;
+    }
+}
+.user-details-nav{
+    height: 200px;
+    margin-top: 50px;
+    padding: 0px 25px;
+    overflow: hidden;
+    @media screen and (max-width:767px){
+        padding: 0;
+    }
+    div{
+        float: left;
+    }
+    .user-img{
+        height: 100%;
+        .img{
+            width: 150px;
+            height: 150px;
+            margin-top: 25px;
+            @include prefix(border-radius,100%,webkit moz o ms);
+            overflow: hidden;
+            @media screen and (max-width:767px){
+                width: 100px;
+                height: 100px;
+                margin-top: calc(100px/2);
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .user-name{
+            height: 200px;
+            text-transform: capitalize;
+            font-weight: 600;
+            margin-left: 20px;
+            @media screen and (max-width:767px){
+                width: calc(100% - 125px);
+                height: 100px;
+                margin-top: calc(100px/2);
+            }
+            span{
+                display: block;
+            }
+            .inf{
+                line-height: 35px;
+                margin-top: 60px;
+                @media screen and (max-width:767px){
+                    line-height: unset;
+                    margin: 25px 0px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+   .user-cart{
+        ul{
+            width: 100px;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            text-align: right;
+            float: right;
+            margin-top: 85px;
+        }
+        span{
+            float: right;
+            display: block;
+            position: absolute;
+            right: 14px;
+            bottom: -15px;
+            text-transform:capitalize;
+        }
+    }
+}
+.user-details{
+    .details-container{
+        list-style: none;
+        .detail{
+            height: 80px;
+            background-color: $-s-m-color;
+            @include prefix(border-radius,10px,webkit moz o ms);
+            margin: 25px 0px;
+            overflow: hidden;
+            ul{
+                list-style: none;
+                display:flex;
+                justify-content: space-between;
+                height: 100%;
+                padding: 0px 25px ;
+                line-height: 80px;
+                text-transform: capitalize;
+                font-weight: 600;
+                @media screen and (max-width:767px){
+font-size: 12px;
+                }
+            }
+        }
+    }
+}

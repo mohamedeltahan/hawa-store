@@ -1,0 +1,136 @@
+@import "../helpers/_variables";
+@import "../helpers/_mixin";
+
+.main-footer-container {
+    background-color: $-s-m-color;
+    overflow: hidden;
+    padding: 50px 0px 25px;
+    margin-top: 50px;
+    .sec {
+        height: fit-content;
+        float: left;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    .company-info {
+        text-transform: capitalize;
+        h1 {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        p {
+            font-size: 12px;
+        }
+        .footer-social-links {
+            text-transform: capitalize;
+            span {
+                font-weight: bold;
+                position: relative;
+                span {
+                    position: absolute;
+                    right: -35px;
+                    bottom: 3px;
+                    height: 2px;
+                    width: 30px;
+                    background-color: #222;
+                }
+            }
+            ul {
+                list-style: none;
+                width: 100%;
+                li {
+                    margin-top: 15px;
+                    display: inline-block;
+                    @include prefix(transition, 0.3s, webkit moz o ms);
+                    &:hover {
+                        @include prefix(transition, 0.3s, webkit moz o ms);
+                        color: $m-color;
+                        cursor: pointer;
+                    }
+                }
+                li + li {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    .f-sec {
+        div {
+            width: fit-content;
+            margin: auto;
+        }
+        span {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+        ul {
+            margin-top: 35px;
+            list-style: none;
+            font-size: 16px;
+            li {
+                text-transform: capitalize;
+                font-style: italic;
+                padding: 5px 0px;
+                cursor: pointer;
+                @include prefix(transition, 0.3s, webkit moz o ms);
+                &:hover{
+                    @include prefix(transition, 0.3s, webkit moz o ms);
+                    color: $m-color;
+                }
+            }
+        }
+        .contact-info-footer{
+            width: 100%;
+            ul{
+                li{
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+        .useful-links-footer{
+            width: 70%;
+            @media screen and (max-width:767px){
+                width: 100%;
+            }
+        }
+        .subscribe-footer{
+            width: 80%;
+            @media screen and (max-width:767px){
+                width: 100%;
+            }
+            input{
+                padding: 10px 0px 10px 35px;
+                width: 100%;
+                @include prefix(border-radius, 10px, webkit moz o ms);
+                border: solid 1px $m-color;
+                outline: 0;
+                font-size: 14px;
+            }
+            li{
+                position: relative;
+                svg{
+                    position: absolute;
+                    left: 10px;
+                    top: 19px;
+                }
+            }
+            button{
+                padding: 8px;
+                width: 100%;
+                @include prefix(border-radius, 10px, webkit moz o ms);
+                border: 0;
+                background-color: $m-color;
+                color: white;
+                @include prefix(transition, 0.3s, webkit moz o ms);
+                &:hover{
+                    background-color: $m-hover;
+                    @include prefix(transition, 0.3s, webkit moz o ms);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,130 @@
+@import "../helpers/_variables";
+@import "../helpers/_mixin";
+
+
+.item{
+    width: calc((100% / 4) - (45px/4));
+    @media screen and (max-width:992px){
+        width: calc(50% - 7.5px);
+    }
+    @media screen and (max-width:576px){
+        width: 100%;
+    }
+    padding: 0px;
+    border: solid 1px #b6b6b6;
+    margin-bottom: 15px;
+    @include prefix(border-radius,10px,webkit moz o ms);
+    overflow: hidden;
+    display: inline-block;
+    .item-pic-container{
+        height: 200px;
+        overflow: hidden;
+        background-color: $m-color;
+        position: relative;
+        .item-pic{
+            height: 100%;
+            .feature{
+                position: absolute;
+                left: 0;
+                top: 25px;
+                background-color: $m-color;
+                color: #fff;
+                padding: 8px;
+                text-transform: capitalize;
+                font-size: 12px;
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .item-info-container{
+        .item-info{
+            .info{
+                padding: 15px;
+                ul{
+                    list-style: none;
+                    text-transform: capitalize;
+                    .item-category{
+                        color: gray;
+                        font-size: 12px;
+                    }
+                    .item-name{
+                        color: $m-color;
+                        font-weight: bold;
+                        font-size: 18px;
+                        margin-bottom: 15px;
+                    }
+                    .item-rate{
+                        font-size: 12px;
+                    }
+                    .item-price{
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: $m-color;
+                        .old-price{
+                            color: gray;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+            .checkout-container{
+                height: 80px;
+                .checkout-btn{
+                    padding: 15px;
+                    width: 60%;
+                    float: left;
+                    button{
+                        width: 100%;
+                        padding: 14px;
+                        border: 0;
+                        background-color: $m-color;
+                        color: #fff;
+                        font-size: 14px;
+                        @include prefix(border-radius,10px,webkit moz o ms);
+                        @include prefix(transition,.3s,webkit moz o ms);
+                        text-transform: capitalize;
+                        &:hover{
+                            background-color: $m-hover;
+                            @include prefix(transition,.3s,webkit moz o ms);
+                        }
+                    }
+                }
+                .checkout-action{
+                    height:50px;
+                    margin-top: 15px;
+                    width: 40%;
+                    float: right;
+                    text-align: right;
+                    position: relative;
+                    ul{
+                        width: 80%;
+                        position: absolute;
+                        list-style: none;
+                        display: flex;
+                        justify-content: space-around;
+                        top: 50%;
+                        left: 50%;
+                        @include prefix(transform,translate(-50%,-50%));
+                        li{
+                            font-size: 20px;
+                            color: $m-color;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.item:nth-of-type(even){
+    
+    @media screen and (max-width:992px){
+        margin-left: 15px;
+    }
+    @media screen and (max-width:576px){
+        margin-left: 0;
+    }
+}
